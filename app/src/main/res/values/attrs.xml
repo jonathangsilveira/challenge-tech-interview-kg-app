@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SportEventSectionView">
+        <attr name="sport_event_section_title" format="reference|string" />
+        <attr name="sport_event_section_favorite" format="reference|boolean" />
+        <attr name="sport_event_section_expanded" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ActiveEventItemView">
+        <attr name="active_event_item_favorite" format="reference|boolean" />
+        <attr name="active_event_item_homeCompetitor" format="reference|string" />
+        <attr name="active_event_item_awayCompetitor" format="reference|string" />
+    </declare-styleable>
+</resources>

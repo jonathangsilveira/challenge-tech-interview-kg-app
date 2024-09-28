@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recycler_view_default_padding">8dp</dimen>
+    <dimen name="default_view_spacing">4dp</dimen>
+    <dimen name="view_spacing_3">16dp</dimen>
+</resources>

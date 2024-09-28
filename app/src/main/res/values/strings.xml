@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Challenge Tech Interview App</string>
+    <string name="versus">VS</string>
+    <string name="live_event">LIVE!</string>
+    <string name="no_data_found">No data found!</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="network_error">Network error!</string>
+    <string name="error_add_to_favorite">Error on add sport event to favorite!</string>
+    <string name="error_remove_from_favorite">Error on remove sport event from favorite!</string>
+</resources>
