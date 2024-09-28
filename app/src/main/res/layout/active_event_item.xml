@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edu.jgsilveira.challenge.kg.presentation.view.activeevent.ActiveEventView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activeEventItem"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_view_spacing"/>
