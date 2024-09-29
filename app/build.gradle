@@ -58,6 +58,9 @@ dependencies {
 
     implementation(libs.androidx.datastore.preferences)
 
+    // Debug
+    implementation(libs.okttp3.logging.interceptor)
+
     // Test libs
     testImplementation(libs.mockk)
     testImplementation(libs.kotlinx.coroutines.test)
