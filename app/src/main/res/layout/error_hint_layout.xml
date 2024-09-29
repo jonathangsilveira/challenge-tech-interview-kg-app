@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/errorHintIcon"
+        android:layout_width="@dimen/view_size_2"
+        android:layout_height="@dimen/view_size_2"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/view_spacing_3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/errorHintTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/view_spacing_3"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:text="@string/no_data_found_message" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/errorHintPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/view_spacing_3"
+        tools:text="@string/reload" />
+</merge>
