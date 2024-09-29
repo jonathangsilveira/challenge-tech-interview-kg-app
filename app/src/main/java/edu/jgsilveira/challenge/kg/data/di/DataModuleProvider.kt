@@ -18,7 +18,9 @@ import edu.jgsilveira.challenge.kg.domain.repository.SportEventsRepository
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -45,6 +47,11 @@ object DataModuleProvider {
                 .readTimeout(15L, TimeUnit.SECONDS)
                 .connectTimeout(15L, TimeUnit.SECONDS)
                 .retryOnConnectionFailure(false)
+                .addInterceptor(
+                    HttpLoggingInterceptor().apply {
+                        level = HttpLoggingInterceptor.Level.BODY
+                    }
+                )
                 .build()
         }
 
@@ -54,7 +61,7 @@ object DataModuleProvider {
                 .client(get())
                 .addConverterFactory(
                     get<Json>().asConverterFactory(
-                        MediaType.get(APP_JSON_MEDIA_TYPE)
+                        APP_JSON_MEDIA_TYPE.toMediaType()
                     )
                 )
                 .build()
