@@ -94,11 +94,18 @@ class MainActivity : AppCompatActivity() {
     private fun onErrorState(error: ActiveSportEventsUIError) {
         binding.activeSportEventsContainer.isVisible = false
         binding.activeSportEventsProgress.isVisible = false
-        binding.activeSportEventsError.isVisible = true
-        binding.activeSportEventsErrorImage.isGone = true
-        binding.activeSportEventsErrorTitle.setText(
-            error.messageResId
-        )
+        with(binding.activeSportEventsError) {
+            isVisible = true
+            setTitle(
+                title = getString(error.messageResId)
+            )
+            setPrimaryButtonText(
+                text = getString(R.string.reload)
+            )
+            setOnPrimaryButtonClickListener {
+                viewModel.refreshSportEvents()
+            }
+        }
     }
 
     private fun onLoadingState() {

@@ -26,29 +26,13 @@
         android:visibility="gone"
         tools:visibility="visible" />
 
-    <LinearLayout
+    <edu.jgsilveira.challenge.kg.presentation.view.error.ErrorHintView
         android:id="@+id/activeSportEventsError"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical"
         android:visibility="gone"
-        tools:visibility="visible">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/activeSportEventsErrorImage"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/view_spacing_3" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/activeSportEventsErrorTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/view_spacing_3"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            tools:text="No data found!" />
-    </LinearLayout>
+        tools:visibility="visible"
+        tools:error_hint_title="@string/no_data_found"
+        tools:error_hint_primary_button_text="@string/reload"/>
 </FrameLayout>
