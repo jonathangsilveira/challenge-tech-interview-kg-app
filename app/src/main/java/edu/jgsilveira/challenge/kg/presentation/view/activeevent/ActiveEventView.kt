@@ -56,16 +56,19 @@ internal class ActiveEventView @JvmOverloads constructor(
             R.styleable.ActiveEventItemView,
             defStyleAttr
         ) {
-            getBoolean(
+            val isFavorite = getBoolean(
                 R.styleable.ActiveEventItemView_active_event_item_favorite,
                 false
             )
-            getString(
+            val homeCompetitor = getString(
                 R.styleable.ActiveEventItemView_active_event_item_homeCompetitor
             )
-            getString(
+            val awayCompetitor = getString(
                 R.styleable.ActiveEventItemView_active_event_item_awayCompetitor
             )
+            isFavoriteChecked = isFavorite
+            setHomeCompetitor(homeCompetitor)
+            setAwayCompetitor(awayCompetitor)
         }
     }
 
