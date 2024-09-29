@@ -1,12 +1,13 @@
 package edu.jgsilveira.challenge.kg.data.remote.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 internal data class RemoteActiveEvent(
-    val d: String,
-    val i: String,
-    val sh: String,
-    val si: String,
-    val tt: Int
+    @SerialName("d") val d: String,
+    @SerialName("i") val i: String,
+    @SerialName("sh") val sh: String,
+    @SerialName("si") val si: String,
+    @SerialName("tt") val tt: Int
 )
