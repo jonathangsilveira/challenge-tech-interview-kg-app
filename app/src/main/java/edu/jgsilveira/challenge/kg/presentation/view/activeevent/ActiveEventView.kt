@@ -26,6 +26,7 @@ internal class ActiveEventView @JvmOverloads constructor(
 
     var isFavoriteChecked: Boolean = false
         set(value) {
+            field = value
             updateFavoriteToggle(value)
         }
 
@@ -102,7 +103,6 @@ internal class ActiveEventView @JvmOverloads constructor(
     }
 
     private fun updateFavoriteToggle(isChecked: Boolean) {
-        isFavoriteChecked = isChecked
         binding.activeEventItemFavoriteToggle.setImageResource(
             if (isChecked) {
                 R.drawable.round_star_24
