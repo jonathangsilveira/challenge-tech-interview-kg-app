@@ -84,6 +84,7 @@ internal class ActiveEventView @JvmOverloads constructor(
         listener: ((Boolean) -> Unit)?
     ) {
         binding.activeEventItemFavoriteToggle.setOnClickListener {
+            isFavoriteChecked = !isFavoriteChecked
             listener?.invoke(isFavoriteChecked)
         }
     }
