@@ -20,8 +20,8 @@ internal class ActiveEventMapper : Mapper<RemoteActiveEvent, ActiveEvent> {
         )
         return ActiveEvent(
             id = from.i,
-            homeCompetitor = competitors[HOME_COMPETITOR_INDEX],
-            awayCompetitor = competitors[AWAY_COMPETITOR_INDEX],
+            homeCompetitor = competitors.getOrNull(HOME_COMPETITOR_INDEX).orEmpty(),
+            awayCompetitor = competitors.getOrNull(AWAY_COMPETITOR_INDEX).orEmpty(),
             sportId = from.si,
             startsAt = from.tt * 1000L
         )
