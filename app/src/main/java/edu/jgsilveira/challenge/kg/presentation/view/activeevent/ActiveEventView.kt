@@ -30,8 +30,6 @@ internal class ActiveEventView @JvmOverloads constructor(
             updateFavoriteToggle(value)
         }
 
-    private var startAtTimeMillis: Long? = null
-
     private val timer = ActiveEventTimer()
 
     private val timerListener = object : ActiveEventTimerListener {
@@ -89,13 +87,11 @@ internal class ActiveEventView @JvmOverloads constructor(
         }
     }
 
-    fun startCountdown() {
-        startAtTimeMillis?.let { startTime ->
-            val remainingTime = startTime - System.currentTimeMillis()
-            with(timer) {
-                setActiveEventTimeListener(timerListener)
-                start(remainingTime, INTERVAL)
-            }
+    fun startCountdown(startAtTimeMillis: Long) {
+        val remainingTime = startAtTimeMillis - System.currentTimeMillis()
+        with(timer) {
+            setActiveEventTimeListener(timerListener)
+            start(remainingTime, INTERVAL)
         }
     }
 

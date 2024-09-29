@@ -62,7 +62,7 @@ internal class ActiveSportEventViewHolder(
         setOnFavoriteToggleCheckChanged {
             onFavoriteCheck?.invoke(data.id, it)
         }
-        startCountdown()
+        startCountdown(data.startsAt)
     }
 
     fun unbind() {
