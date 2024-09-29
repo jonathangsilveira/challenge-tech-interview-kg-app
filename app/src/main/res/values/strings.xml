@@ -7,4 +7,6 @@
     <string name="network_error">Network error!</string>
     <string name="error_add_to_favorite">Error on add sport event to favorite!</string>
     <string name="error_remove_from_favorite">Error on remove sport event from favorite!</string>
+    <string name="reload">Reload</string>
+    <string name="no_data_found_message">No data found!</string>
 </resources>
