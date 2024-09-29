@@ -11,4 +11,10 @@
         <attr name="active_event_item_homeCompetitor" format="reference|string" />
         <attr name="active_event_item_awayCompetitor" format="reference|string" />
     </declare-styleable>
+
+    <declare-styleable name="ErrorHintView">
+        <attr name="error_hint_icon" format="reference" />
+        <attr name="error_hint_title" format="reference|string" />
+        <attr name="error_hint_primary_button_text" format="reference|string" />
+    </declare-styleable>
 </resources>
